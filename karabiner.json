@@ -47,6 +47,32 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Space if pressed alone, left_command if pressed with other key.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "spacebar"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -143,6 +169,41 @@
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
                     "simple_modifications": []
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 49257,
+                        "vendor_id": 1133
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": []
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 37904,
+                        "vendor_id": 1423
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "caps_lock"
+                            },
+                            "to": {
+                                "key_code": "escape"
+                            }
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
@@ -244,6 +305,9 @@
                 }
             ],
             "name": "Mechanical Keyboard",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
             "selected": true,
             "simple_modifications": [],
             "virtual_hid_keyboard": {

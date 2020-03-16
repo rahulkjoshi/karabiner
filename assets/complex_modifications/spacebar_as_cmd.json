@@ -1,0 +1,31 @@
+{
+  "title": "Spacebar modifier",
+  "rules": [
+    {
+      "description": "Space if pressed alone, left_command if pressed with other key.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
