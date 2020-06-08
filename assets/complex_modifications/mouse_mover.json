@@ -2,7 +2,7 @@
   "title": "Use mouse side buttons to switch between Desktops",
   "rules": [
     {
-      "description": "Maps button5 and button4 to ctrl+Left and ctrl+Right respectively",
+      "description": "Maps button5 and button4 to ctrl+cmd+Left and ctrl+cmd+Right respectively",
       "manipulators": [
         {
           "type": "basic",
@@ -13,7 +13,8 @@
             {
               "key_code": "left_arrow",
               "modifiers": [
-                "left_control"
+                "left_control",
+		"left_gui"
               ]
             }
           ]
@@ -27,7 +28,8 @@
             {
               "key_code": "right_arrow",
               "modifiers": [
-                "left_control"
+                "left_control",
+		"left_gui"
               ]
             }
           ]
